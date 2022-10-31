@@ -67,4 +67,54 @@ function addNumber(x:number, y:number):number {
     return x+ y;
 }
 
+function callToPhone(phone: number | string) {
+    return phone;
+}
 
+// Quando utilizar uma função async, a qual retorna uma promise, é necessário declarar o tipo de formato desejado que a promise retornará
+async function getDataBase(id: number):Promise<string> {
+    return "Lucas"; 
+}
+
+// Ao invés do type, pode utilizar-se o interface
+// Quando utilizar class, utilizar o interface
+
+type robot = {
+    id: number;
+    name: string;
+};
+
+const bot: robot = {
+    id: 1,
+    name: "Robocop",
+};
+
+interface robotTwo {
+    id: number;
+    name: string;
+};
+
+const botTwo: robotTwo = {
+    id: 2,
+    name: "Megaman",
+};
+
+
+// classes
+
+class Character {
+    name: string;
+    stregth: number;
+    skill: number;
+
+    constructor(name: string, stregth: number, skill: number) {
+        this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+    attack() :void{
+        console.log(`Attack with ${this.stregth} points.`)
+    }
+}
+
+const p1 = new Character('Ryu', 88, 98);
